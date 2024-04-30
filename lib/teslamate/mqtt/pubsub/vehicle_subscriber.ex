@@ -167,6 +167,9 @@ defmodule TeslaMate.Mqtt.PubSub.VehicleSubscriber do
       }
       |> Jason.encode!()
 
+    Logger.info("active_route JSON: #{active_route}")
+    Logger.info("active_route_destination: #{active_route_destination}")
+
     Map.merge(map, %{
       active_route_destination: summary.active_route_destination,
       active_route_latitude: summary.active_route_latitude,
